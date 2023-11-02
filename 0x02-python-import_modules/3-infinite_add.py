@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Print the addition of all arguments."""
+
 if __name__ == "__main__":
+    """Print the addition of all arguments."""
     from sys import argv
     
     counter = 0
