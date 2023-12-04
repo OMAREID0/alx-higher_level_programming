@@ -3,9 +3,11 @@
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
-    """Intialize a new Rectangle."""
+    """Represent a rectangle using BaseGeometry."""
+
     def __init__(self, width, height):
+        """Intialize a new Rectangle."""
         self.integer_validator("width", width)
-        self.width = width
+        self.__widthw = width
         self.integer_validator("height", height)
-        self.height = height
+        self.__height = height

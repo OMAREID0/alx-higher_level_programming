@@ -3,7 +3,7 @@
 
 def is_same_class(obj, a_class):
     """return true if the same class"""
-    if(type(obj) == a_class):
-        return (True)
+    if type(obj) == a_class:
+        return True
     else:
-        return (False)
+        return False
