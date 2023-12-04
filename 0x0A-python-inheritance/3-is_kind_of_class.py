@@ -2,8 +2,9 @@
 """check if object is an instance"""
 
 def is_kind_of_class(obj, a_class):
-    """return True if obj is instance or inherited instance of a_class"""
-   
-    if isinstance(obj, a_class):
-        return (True)
-    return (False)
+    '''function: is_kind_of_class
+    obj: an object
+    a_class: a class
+    Returns: Bool
+    '''
+    return isinstance(obj, a_class)
