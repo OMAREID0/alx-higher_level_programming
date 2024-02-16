@@ -8,7 +8,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     sql = """SELECT * FROM states WHERE name
         LIKE %s ORDER BY states.id ASC"""
-    state = sys.argv[4]
+    state = (sys.argv[4],)
     cur.execute(sql, state)
     data = cur.fetchall()
     for row in data:
