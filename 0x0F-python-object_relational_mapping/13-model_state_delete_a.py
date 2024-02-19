@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" prints the first State object from the database hbtn_0e_6_usa
+""" prints the State object with the name passed as argument from the database
 """
 import sys
 from model_state import Base, State
@@ -13,7 +13,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.like('%a%'))
-    for state in states:
-        session.delete(state)
+    for instance in session.query(State).filter(State.name.like('%a%')):
+        session.delete(instance)
     session.commit()
